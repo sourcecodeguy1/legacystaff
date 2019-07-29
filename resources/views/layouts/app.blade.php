@@ -10,7 +10,9 @@
     <title>{{ config('app.name', 'Legacy') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{--<script src="{{ asset('js/app.js') }}"></script>--}}
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -56,6 +58,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                    <a class="dropdown-item {{Auth::user()->privilege_type !== 'admin' ? 'collapse' : ''}}" href="/dashboard">{{Auth::user()->privilege_type === 'admin' ? 'Manage Users' : ''}}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -73,11 +76,30 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            <div class="container">
-                @yield('content')
-            </div>
-        </main>
+        <div class="container">
+
+            @if(Auth::user())
+                @include('inc/navbar')
+            @endif
+            <br />
+            @include('inc/messages')
+            @yield('content')
+
+        </div>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor1' );
+        CKEDITOR.replace( 'article-ckeditor2' );
+        CKEDITOR.replace( 'article-ckeditor3' );
+        CKEDITOR.replace( 'article-ckeditor4' );
+        CKEDITOR.replace( 'article-ckeditor5' );
+        CKEDITOR.replace( 'article-ckeditor6' );
+        CKEDITOR.replace( 'article-ckeditor7' );
+        CKEDITOR.replace( 'article-ckeditor8' );
+        CKEDITOR.replace( 'article-ckeditor9' );
+        CKEDITOR.replace( 'article-ckeditor10' );
+    </script>
 </body>
 </html>

@@ -11,12 +11,10 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', 'PagesController@index');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/9th_grade', 'GradeNineController@index');
+
+Route::resource('dashboard', 'DashboardController');

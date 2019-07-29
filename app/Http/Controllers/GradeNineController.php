@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
 class GradeNineController extends Controller
 {
     /**
@@ -17,6 +17,7 @@ class GradeNineController extends Controller
     }
 
     public function index(){
-        return view('dashboard/9th_grade/9th_grade');
+
+        return view('9th_grade/9th_grade');
     }
 }
