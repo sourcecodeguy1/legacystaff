@@ -18,3 +18,4 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('/9th_grade', 'GradeNineController@index');
 
 Route::resource('dashboard', 'DashboardController');
+Route::resource('tasks', 'TasksController');

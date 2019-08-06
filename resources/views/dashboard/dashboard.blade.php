@@ -53,14 +53,36 @@
                 @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-7" style="margin-left: 340px; display: none">
+                Event Deleted
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
 
+            <div class="col-lg-8" style="margin-left: 325px;">
+                <div id="calendar"></div>
+            </div>
+        </div>
+        @include('inc/fullcalendartemplate')
+    </div>
+    <br />
+    <div class="container">
+        <div class="row" style="margin-left: 325px;">
             @if(Auth::user()->privilege_type === 'admin')
-                <div class=""><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div><br />
-                @endif
+                <div class="col-lg-11"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
+            @endif
         </div>
     </div>
     <br />
     <br />
     <br />
     <br />
+    <!-------CDN includes-------->
+    {{--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>--}}
+    <!--======================--->
 @endsection

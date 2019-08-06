@@ -3,21 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Dashboard;
+
 use App\Task;
 
-class DashboardController extends Controller
-{
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+use Exception;
 
+class TasksController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
@@ -25,11 +17,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $data = Dashboard::all();
-        $tasks = Task::all();
 
-        //return $data;
-        return view('dashboard/dashboard')->with(['data' => $data, 'tasks' => $tasks]);
     }
 
     /**
@@ -50,7 +38,8 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Task::create($request->all());
+        return redirect('dashboard/#calendar');
     }
 
     /**
@@ -66,21 +55,25 @@ class DashboardController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $dashboard_edit = Dashboard::findOrFail($id);
+        $id = $request->edit_id;
 
-        /*if(!$id){
-            abort('404', 'Not found');
-        } else {
-            return view('dashboard/edit')->with('id', $id);
-        }*/
-        return view('dashboard/edit')->with('dashboard_edit', $dashboard_edit);
+        try{
+            $edit_task = Task::findorFail($id);
 
+            $edit_task->update($request->all());
+
+            return response()->json(['status' => 200]);
+        }
+        catch (Exception $e){
+            $arr = ['status' => 'BAD'];
+            return response()->json($arr);
+        }
     }
 
     /**
@@ -92,26 +85,41 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dashboard_post = Dashboard::find($id);
+        $id = $request->id;
 
-        $dashboard_post->update($request->all());
+        try{
+            $update_task = Task::findorFail($id);
 
-        if ($dashboard_post->wasChanged()) {
-            return redirect('dashboard')->with(['success' => 'Changes were successfully saved.']);
+            $update_task->update($request->all());
 
-        } else {
-            return redirect('dashboard/' . $id . '/edit')->with(['error' => 'No changes made.']);
+            return response()->json(['status' => 200]);
+        }
+        catch (Exception $e){
+            $arr = ['status' => 'BAD'];
+            return response()->json($arr);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->delete_id;
+
+        try{
+            $delete_task = Task::findorFail($id);
+
+            $delete_task->delete($request->all());
+
+            return response()->json(['status' => 200]);
+        }
+        catch (Exception $e){
+            $arr = ['status' => 'BAD'];
+            return response()->json($arr);
+        }
     }
 }

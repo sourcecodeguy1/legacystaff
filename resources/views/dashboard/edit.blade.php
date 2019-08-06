@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+@if(Auth::user()->privilege_type === 'admin')
     <form action="{!! action('DashboardController@update',$dashboard_edit->id) !!}" method="POST">
 
         <input name="_method" type="hidden" value="PUT">
@@ -106,5 +106,7 @@
     <br />
     <br />
     <br />
-
+@else
+    <h2>Sorry, you don't have authorization to view this page.</h2>
+    @endif
 @endsection
