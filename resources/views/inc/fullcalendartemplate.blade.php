@@ -125,8 +125,9 @@
                 color : $('#ModalEdit #color').val()
             };
             if(data.title !== "") {
-                let url = 'tasks/' + data.edit_id + '/edit';
-                //url = url.replace(':id', data.edit_id);
+                //let url = 'tasks/' + data.edit_id + '/edit';
+                let url = '{!! action('TasksController@edit', ':id') !!}';
+                url = url.replace(':id', data.edit_id);
                 $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -139,7 +140,10 @@
                         //alert('Event updated');
                         console.log(data);
                         if (data.status === 200) {
-                            window.location.href = 'dashboard/#calendar';
+                            $('#ModalEdit').modal('hide');
+
+                            location.reload(true);
+
                         } else {
                             alert('Could not be saved. Try again.');
                         }
@@ -160,32 +164,32 @@
                 color : $('#ModalEdit #color').val()
             };
 
-                let url = 'tasks/destroy';
-                //url = url.replace(':id', data.edit_id);
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    url: url,
-                    dataType: "JSON",
-                    method: "DELETE",
-                    data: data,
-                    success: function (data) {
-                        //alert('Event updated');
-                        console.log(data);
-                        if (data.status === 200) {
-                            $('#ModalEdit').modal('hide');
-                            $('#eventDeleteMessage').css('display','block');
-                            setTimeout(function () {
-                                window.location.href = 'dashboard/#calendar';
-                            },1000)
+            let url = 'tasks/destroy';
+            //url = url.replace(':id', data.edit_id);
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: url,
+                dataType: "JSON",
+                method: "DELETE",
+                data: data,
+                success: function (data) {
+                    //alert('Event updated');
+                    console.log(data);
+                    if (data.status === 200) {
+                        $('#ModalEdit').modal('hide');
+                        $('#eventDeleteMessage').css('display','block');
+                        setTimeout(function () {
+                            location.reload(true);
+                        },1000)
 
 
-                        } else {
-                            alert('Could not delete. Try again.');
-                        }
+                    } else {
+                        alert('Could not delete. Try again.');
                     }
-                });
+                }
+            });
 
         });
 
