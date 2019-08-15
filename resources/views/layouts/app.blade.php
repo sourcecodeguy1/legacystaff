@@ -98,7 +98,7 @@
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
 
-        let itemsToRemove = 'Source,Scayt,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Table,Image,Anchor,PasteFromWord,PasteText';
+        let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Table,Image,Anchor,PasteFromWord,PasteText';
 
         CKEDITOR.replace( 'article-ckeditor1', {
             removeButtons: itemsToRemove
@@ -109,17 +109,37 @@
             removeButtons: itemsToRemove
         } );
 
-        CKEDITOR.replace( 'article-ckeditor3' );
-        CKEDITOR.replace( 'article-ckeditor4' );
-        CKEDITOR.replace( 'article-ckeditor5' );
-        CKEDITOR.replace( 'article-ckeditor6' );
-        CKEDITOR.replace( 'article-ckeditor7' );
-        CKEDITOR.replace( 'article-ckeditor8' );
-        CKEDITOR.replace( 'article-ckeditor9' );
-        CKEDITOR.replace( 'article-ckeditor10' );
+        CKEDITOR.replace( 'article-ckeditor3', {
+            removeButtons: itemsToRemove
+        } );
 
+        CKEDITOR.replace( 'article-ckeditor4', {
+            removeButtons: itemsToRemove
+        } );
 
+        CKEDITOR.replace( 'article-ckeditor5', {
+            removeButtons: itemsToRemove
+        } );
 
+        CKEDITOR.replace( 'article-ckeditor6', {
+            removeButtons: itemsToRemove
+        } );
+
+        CKEDITOR.replace( 'article-ckeditor7', {
+            removeButtons: itemsToRemove
+        } );
+
+        CKEDITOR.replace( 'article-ckeditor8', {
+            removeButtons: itemsToRemove
+        } );
+
+        CKEDITOR.replace( 'article-ckeditor9', {
+            removeButtons: itemsToRemove
+        } );
+
+        CKEDITOR.replace( 'article-ckeditor10', {
+            removeButtons: itemsToRemove
+        } );
     </script>
 </body>
 </html>

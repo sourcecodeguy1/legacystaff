@@ -14,46 +14,45 @@
     @endforeach
 
     {{--<div class="text-center p-3 mb-2 bg-secondary text-white"><strong>Week 2</strong> 7/31 - 8/02</div>--}}
-    <div class="row container">
-        <div class="card" style="width: 20rem;">
-            <img src="{{ asset('staff2019/staff2019.jpg') }}" class="card-img-top img-thumbnail" alt="...">
-            <div class="card-body">
-                @foreach($data as $datas)
-                <h5 class="card-title">{!! $datas->staff_picture_title !!}</h5>
-                <p class="card-text">{!! $datas->staff_picture_year !!}</p>
+    <div class="container">
+        <div class="row">
+        <div class="">
+            <div class="card" style="width: 20rem;">
+                <img src="{{ asset('staff2019/staff2019.jpg') }}" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                    @foreach($data as $datas)
+                        <h5 class="card-title">{!! $datas->staff_picture_title !!}</h5>
+                        <p class="card-text">{!! $datas->staff_picture_year !!}</p>
                     @endforeach
+                </div>
             </div>
         </div>
 
         <div class="col-lg-8">
-            <table class="table table-responsive">
-                <thead class="thead-dark">
-                <tr>
-                    <th class="text-center" colspan="6">{{$datas->week_of.' '. $datas->week_of_date}}</th>
-                </tr>
-                <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                    <th scope="col">Saturday</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($data as $datas)
-                    <tr>
-                        <td>{!! $datas->Monday !!}</td>
-                        <td>{!! $datas->Tuesday !!}</td>
-                        <td>{!! $datas->Wednesday !!}</td>
-                        <td>{!! $datas->Thursday !!}</td>
-                        <td>{!! $datas->Friday !!}</td>
-                        <td>{!! $datas->Saturday !!}</td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+            <div class="p-3 mb-2 bg-dark text-white text-center">{{$datas->week_of.' '. $datas->week_of_date}}</div>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">Monday</a>
+                    <a class="nav-item nav-link" id="nav-Tuesday-tab" data-toggle="tab" href="#nav-Tuesday" role="tab" aria-controls="nav-Tuesday" aria-selected="false">Tuesday</a>
+                    <a class="nav-item nav-link" id="nav-Wednesday-tab" data-toggle="tab" href="#nav-Wednesday" role="tab" aria-controls="nav-Wednesday" aria-selected="false">Wednesday</a>
+                    <a class="nav-item nav-link" id="nav-Thursday-tab" data-toggle="tab" href="#nav-Thursday" role="tab" aria-controls="nav-Thursday" aria-selected="false">Thursday</a>
+                    <a class="nav-item nav-link" id="nav-Friday-tab" data-toggle="tab" href="#nav-Friday" role="tab" aria-controls="nav-Friday" aria-selected="false">Friday</a>
+                    <a class="nav-item nav-link" id="nav-Saturday-tab" data-toggle="tab" href="#nav-Saturday" role="tab" aria-controls="nav-Saturday" aria-selected="false">Saturday</a>
+                </div>
+            </nav>
+            <br />
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-Monday" role="tabpanel" aria-labelledby="nav-Monday-tab">{!! $datas->Monday !!}</div>
+                <div class="tab-pane fade" id="nav-Tuesday" role="tabpanel" aria-labelledby="nav-Tuesday-tab">{!! $datas->Tuesday !!}</div>
+                <div class="tab-pane fade" id="nav-Wednesday" role="tabpanel" aria-labelledby="nav-Wednesday-tab">{!! $datas->Wednesday !!}</div>
+                <div class="tab-pane fade" id="nav-Thursday" role="tabpanel" aria-labelledby="nav-Thursday-tab">{!! $datas->Thursday !!}</div>
+                <div class="tab-pane fade" id="nav-Friday" role="tabpanel" aria-labelledby="nav-Friday-tab">{!! $datas->Friday !!}</div>
+                <div class="tab-pane fade" id="nav-Saturday" role="tabpanel" aria-labelledby="nav-Saturday-tab">{!! $datas->Saturday !!}</div>
+            </div>
+
         </div>
+
+    </div>
     </div>
     <div class="container">
         <div class="row">
@@ -80,9 +79,7 @@
     <br />
     <br />
     <br />
-    <!-------CDN includes-------->
-    {{--<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>--}}
-    <!--======================--->
+    <!-------Include jQuery File Here-------->
+
+    <!--===================================--->
 @endsection

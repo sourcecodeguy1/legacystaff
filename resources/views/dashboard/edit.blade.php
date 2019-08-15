@@ -107,6 +107,6 @@
     <br />
     <br />
 @else
-    <h2>Sorry, you don't have authorization to view this page.</h2>
+    <h2>Sorry, you don't have authorization to view this page. Contact your administrator if you feel this is an error.</h2>
     @endif
 @endsection
