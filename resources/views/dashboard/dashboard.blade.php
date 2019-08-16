@@ -60,12 +60,14 @@
                 Event Deleted
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
+
             <div class="container">
                 <div class="row" style="margin-left: 325px;">
                     @if(Auth::user()->privilege_type === 'admin')
                         <div class="col-lg-11"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
                     @endif
                 </div>
+                <br />
             </div>
             <div class="col-lg-8" style="margin-left: 325px;">
                 <div id="calendar"></div>

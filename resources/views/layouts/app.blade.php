@@ -98,7 +98,7 @@
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
 
-        let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Table,Image,Anchor,PasteFromWord,PasteText';
+        let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
 
         CKEDITOR.replace( 'article-ckeditor1', {
             removeButtons: itemsToRemove
