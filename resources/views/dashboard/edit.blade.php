@@ -56,7 +56,7 @@
         <div class="row">
 
             <div class="col-lg-4">
-                <label for="article-ckeditor5">EXPO ACTION ITEMS</label>
+                <label for="article-ckeditor5">SAVE THE DATES</label>
                 <textarea class="form-control" name="Thursday" id="article-ckeditor5" rows="3" placeholder="Enter content">{{$dashboard_edit->Thursday}}</textarea>
             </div>
 
@@ -66,7 +66,7 @@
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor7">SAVE THE DATES</label>
+                <label for="article-ckeditor7">EXPO ACTION ITEMS</label>
                 <textarea class="form-control" name="Saturday" id="article-ckeditor7" rows="3" placeholder="Enter content">{{$dashboard_edit->Saturday}}</textarea>
             </div>
 
