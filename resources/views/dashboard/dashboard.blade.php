@@ -32,7 +32,7 @@
             <div class="p-3 mb-2 bg-dark text-white text-center">{{$datas->week_of.' '. $datas->week_of_date}}</div>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">SHOUT OUTS</a>
+                    <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">WEEKLY BLAST</a>
                     <a class="nav-item nav-link" id="nav-Tuesday-tab" data-toggle="tab" href="#nav-Tuesday" role="tab" aria-controls="nav-Tuesday" aria-selected="false">DATA HIGHLIGHTS</a>
                     <a class="nav-item nav-link" id="nav-Wednesday-tab" data-toggle="tab" href="#nav-Wednesday" role="tab" aria-controls="nav-Wednesday" aria-selected="false">WEEK UPDATES</a>
                     <a class="nav-item nav-link" id="nav-Thursday-tab" data-toggle="tab" href="#nav-Thursday" role="tab" aria-controls="nav-Thursday" aria-selected="false">SAVE THE DATES</a>
@@ -60,7 +60,13 @@
                 Event Deleted
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
-
+            <div class="container">
+                <div class="row" style="margin-left: 325px;">
+                    @if(Auth::user()->privilege_type === 'admin')
+                        <div class="col-lg-11"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
+                    @endif
+                </div>
+            </div>
             <div class="col-lg-8" style="margin-left: 325px;">
                 <div id="calendar"></div>
             </div>
@@ -68,13 +74,6 @@
         @include('inc/fullcalendartemplate')
     </div>
     <br />
-    <div class="container">
-        <div class="row" style="margin-left: 325px;">
-            @if(Auth::user()->privilege_type === 'admin')
-                <div class="col-lg-11"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
-            @endif
-        </div>
-    </div>
     <br />
     <br />
     <br />
