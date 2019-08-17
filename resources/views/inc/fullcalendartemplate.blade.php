@@ -10,6 +10,13 @@
         // page is now ready, initialize the calendar...
         $('#calendar').fullCalendar({
             // put your options and callbacks here
+            plugins: [ 'dayGrid', 'timeGrid' ],
+            header: {
+                left: 'title',
+                center: 'agendaDay,agendaWeek,month',
+                right: 'prev,next today'
+            },
+
             defaultView: 'month',
             editable: true,
             eventLimit: true, // allow "more" link when too many events
