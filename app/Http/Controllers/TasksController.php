@@ -39,7 +39,7 @@ class TasksController extends Controller
     public function store(Request $request)
     {
         Task::create($request->all());
-        return redirect('dashboard/#calendar');
+        return redirect('dashboard');
     }
 
     /**

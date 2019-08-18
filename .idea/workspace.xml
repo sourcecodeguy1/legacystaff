@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df58ec37-7f57-48b9-9742-239b519346d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inc/fullcalendartemplate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/fullcalendartemplate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/fullcalendar.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +155,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="231f618e-a47f-4450-9d6f-ea41233ee87e" name="Default Changelist" comment="" />
+      <changelist id="df58ec37-7f57-48b9-9742-239b519346d2" name="Default Changelist" comment="" />
       <created>1564116327060</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -172,6 +172,7 @@
       <workItem from="1565589702087" duration="7425000" />
       <workItem from="1565840117847" duration="674000" />
       <workItem from="1565938895356" duration="2571000" />
+      <workItem from="1566109538219" duration="156000" />
     </task>
     <servers />
   </component>
