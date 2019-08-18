@@ -5,19 +5,24 @@
     {{------------------------------------------Layout Content-----------------------------------}}
 
     @foreach($data as $datas)
-        <div class="p-3 mb-2 bg-secondary text-white text-center"><strong>{!! $datas->message_board !!}</strong></div>
-        <div class="p-3 mb-2 bg-secondary text-white text-center">
-            <p>
-                {!! $datas->quote_message !!}
-            </p>
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <div class="p-3 mb-2 bg-secondary text-white text-center"><strong>{!! $datas->message_board !!}</strong></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="" style="width: 100%;">
+                    <div class="p-3 mb-2 bg-secondary text-white text-center"><p>{!! $datas->quote_message !!}</p></div>
+                </div>
+            </div>
         </div>
     @endforeach
 
-    {{--<div class="text-center p-3 mb-2 bg-secondary text-white"><strong>Week 2</strong> 7/31 - 8/02</div>--}}
-    <div class="container">
+    <div class="">
         <div class="row">
-        <div class="">
-            <div class="card" style="width: 20rem;">
+        <div class="col-lg-4">
+            <div class="card" {{--style="width: 20rem;"--}}>
                 <img src="{{ asset('staff2019/staff2019.jpg') }}" class="card-img-top img-thumbnail" alt="...">
                 <div class="card-body">
                     @foreach($data as $datas)
@@ -54,6 +59,7 @@
 
     </div>
     </div>
+    {{---------------------------------EDIT BUTTON AND CALANDER---------------------------------}}
     <div class="container">
         <div class="row">
             <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-7" style="margin-left: 340px; display: none">
@@ -62,15 +68,19 @@
             </div>
 
             <div class="container">
-                <div class="row" style="margin-left: 325px;">
+                <div class="row" {{--style="margin-left: 325px;"--}}>
+                    <div class="col-lg-4"></div>
                     @if(Auth::user()->privilege_type === 'admin')
-                        <div class="col-lg-11"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
+                        <div class="col-lg-8"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
                     @endif
                 </div>
                 <br />
             </div>
-            <div class="col-lg-8 col-sm-12" style="margin-left: 325px;">
-                <div id="calendar"></div>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-8 " {{--style="margin-left: 325px;"--}}>
+                    <div id="calendar"></div>
+                </div>
             </div>
         </div>
         @include('inc/fullcalendartemplate')
