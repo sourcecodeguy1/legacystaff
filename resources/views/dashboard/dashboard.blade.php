@@ -7,7 +7,7 @@
     @foreach($data as $datas)
         <div class="container">
             <div class="row">
-                <div class="">
+                <div class="" style="width: 100%;">
                     <div class="p-3 mb-2 bg-secondary text-white text-center"><strong>{!! $datas->message_board !!}</strong></div>
                 </div>
             </div>
