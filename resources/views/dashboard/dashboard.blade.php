@@ -69,7 +69,7 @@
                 </div>
                 <br />
             </div>
-            <div class="col-lg-8" style="margin-left: 325px;">
+            <div class="col-lg-8 col-sm-12" style="margin-left: 325px;">
                 <div id="calendar"></div>
             </div>
         </div>
