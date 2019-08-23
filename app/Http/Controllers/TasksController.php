@@ -38,8 +38,18 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        Task::create($request->all());
-        return redirect('dashboard');
+
+        try{
+
+            $insert = Task::create($request->all());
+
+            return response()->json(['status' => 200, 'allData' => $insert ]);
+        }
+        catch (Exception $e){
+            $arr = ['status' => 'BAD'];
+            return response()->json($arr);
+        }
+
     }
 
     /**
