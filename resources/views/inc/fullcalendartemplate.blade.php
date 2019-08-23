@@ -32,20 +32,18 @@
                 $('#ModalEdit #id').val(event.id);
                 $('#ModalEdit #title').val(event.title);
                 $('#ModalEdit #color').val(event.color);
-                //$('#calendar').fullCalendar('removeEvents',event.id);
                 $('#ModalEdit').modal('show');
 
-            },/*
-            eventRender: function(event, element) {
-                element.append( "<span class='closeon'>X</span>" );
-                /!*element.find(".closeon").click(function() {
-                    //alert(event.id);
-                    //$('#calendar').fullCalendar('removeEvents',event._id);
-                });*!/
-            },*/
+            },
+            eventDrop: function(event, delta, revertFunc) { // si changement de position
+
+                edit(event);
+
+            },
             eventResize: function(event,dayDelta,minuteDelta,revertFunc) { // si changement de longueur
 
                 edit(event);
+                //alert("Hello World");
 
             },
             events : [
@@ -78,19 +76,14 @@
 
         function edit(event){
 
-            start = event.start.format('YYYY-MM-DD HH:mm:ss');
+           start = event.start.format('YYYY-MM-DD HH:mm:ss');
             if(event.end){
                 end = event.end.format('YYYY-MM-DD HH:mm:ss');
             }else{
                 end = start;
             }
 
-            id =  event.id;
-            //console.log(event.id);
-            /*Event = [];
-            Event[0] = id;
-            Event[1] = start;
-            Event[2] = end;*/
+           let id =  event.id;
 
             let _id = id;
             let _start  = start;
@@ -112,7 +105,7 @@
                 data: {"id": _id, "start":_start, "end": _end},
                 success: function(data) {
                     //alert('Event updated');
-                    //console.log(data);
+                    console.log(data);
                     if(data.status === 200){
                         alert('Event updated');
                     }else{
@@ -121,6 +114,7 @@
                 }
             });
         }
+
         $(window).keydown(function(event){
             if(event.keyCode === 13) {
                 event.preventDefault();

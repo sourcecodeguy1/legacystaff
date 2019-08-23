@@ -45,7 +45,7 @@
                    <div class="row">
 
                        @if(Auth::user()->privilege_type === 'admin')
-                           <div class="col-lg-12"><a href="/dashboard/1/edit" class="btn btn-success btn-block">Edit</a></div>
+                           <div class="col-lg-12"><a href="/9th_grade/edit" class="btn btn-success btn-block">Edit</a></div>
                        @endif
                    </div>
                    <br />
