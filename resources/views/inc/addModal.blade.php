@@ -5,7 +5,7 @@
 
         <div class="modal-content">
 
-            <form class="form-horizontal" method="POST" action="{!! action('TasksController@store') !!}">
+            <form class="form-horizontal">
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -54,7 +54,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" id="btnAddEvent" class="btn btn-primary">Add Event</button>
                 </div>
             </form>
         </div>

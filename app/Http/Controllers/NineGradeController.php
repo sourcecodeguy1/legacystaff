@@ -3,21 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Dashboard;
-use App\Task;
-
-class DashboardController extends Controller
+use App\User;
+use App\NineGradeTaskModel;
+class NineGradeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -25,12 +14,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $url = "dashboard";
-        $data = Dashboard::all();
-        $tasks = Task::all();
-
-        //return $data;
-        return view('dashboard/dashboard')->with(['data' => $data, 'tasks' => $tasks, 'url' => $url]);
+        $url = "9th_grade";
+        $tasks = NineGradeTaskModel::all();
+        return view('9th_grade/9th_grade')->with(['tasks' => $tasks, 'url' => $url]);
     }
 
     /**
@@ -51,7 +37,7 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -73,15 +59,7 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        $dashboard_edit = Dashboard::findOrFail($id);
-
-        /*if(!$id){
-            abort('404', 'Not found');
-        } else {
-            return view('dashboard/edit')->with('id', $id);
-        }*/
-        return view('dashboard/edit')->with('dashboard_edit', $dashboard_edit);
-
+        //
     }
 
     /**
@@ -93,15 +71,15 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dashboard_post = Dashboard::find($id);
+        $nine_grade_post = NineGradeTaskModel::find($id);
 
-        $dashboard_post->update($request->all());
+        $nine_grade_post->update($request->all());
 
-        if ($dashboard_post->wasChanged()) {
-            return redirect('dashboard')->with(['success' => 'Changes were successfully saved.']);
+        if ($nine_grade_post->wasChanged()) {
+            return redirect('9th_grade')->with(['success' => 'Changes were successfully saved.']);
 
         } else {
-            return redirect('dashboard/' . $id . '/edit')->with(['error' => 'No changes made.']);
+            return redirect('9th_grade/' . $id . '/edit')->with(['error' => 'No changes made.']);
         }
     }
 

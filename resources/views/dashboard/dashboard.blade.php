@@ -59,16 +59,17 @@
 
     </div>
     </div>
-    {{---------------------------------EDIT BUTTON AND CALANDER---------------------------------}}
+    {{---------------------------------EDIT BUTTON AND CALENDAR---------------------------------}}
     <div class="container">
         <div class="row">
-            <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-7" style="margin-left: 340px; display: none">
+            <div class="col-lg-4"></div>
+            <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-8" style="display: none">
                 Event Deleted
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
 
             <div class="container">
-                <div class="row" {{--style="margin-left: 325px;"--}}>
+                <div class="row">
                     <div class="col-lg-4"></div>
                     @if(Auth::user()->privilege_type === 'admin')
                         <div class="col-lg-8"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
@@ -78,7 +79,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4"></div>
-                <div class="col-lg-8 " {{--style="margin-left: 325px;"--}}>
+                <div class="col-lg-8 ">
                     <div id="calendar"></div>
                 </div>
             </div>

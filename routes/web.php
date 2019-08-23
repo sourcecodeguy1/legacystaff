@@ -14,8 +14,11 @@
 Route::get('/', 'PagesController@index');
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
-Route::get('/9th_grade', 'GradeNineController@index');
+/*Route::get('/dashboard', 'DashboardController@index');*/
+
+Route::get('/9th_grade', 'NineGradeController@index');
 
 Route::resource('dashboard', 'DashboardController');
 Route::resource('tasks', 'TasksController');
+Route::resource('NineGrade', 'NineGradeController');
+Route::resource('NineGradeTasks', 'NineGradeTasksController');
