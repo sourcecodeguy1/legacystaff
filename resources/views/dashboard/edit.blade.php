@@ -76,19 +76,19 @@
 
         <div class="row">
 
-            <div class="col-lg-4">
+            {{--<div class="col-lg-4">
                 <label for="article-ckeditor8">Theme</label>
                 <textarea class="form-control" name="message_board" id="article-ckeditor8" rows="3" placeholder="Enter message board">{{$dashboard_edit->message_board}}</textarea>
+            </div>--}}
+
+            <div class="col-lg-4">
+                <label for="article-ckeditor8">Staff Picture Title</label>
+                <textarea class="form-control" name="staff_picture_title" id="article-ckeditor8" rows="3" placeholder="Enter a title for your staff picture">{{$dashboard_edit->staff_picture_title}}</textarea>
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor9">Staff Picture Title</label>
-                <textarea class="form-control" name="staff_picture_title" id="article-ckeditor9" rows="3" placeholder="Enter a title for your staff picture">{{$dashboard_edit->staff_picture_title}}</textarea>
-            </div>
-
-            <div class="col-lg-4">
-                <label for="article-ckeditor10">Staff Picture Secondary Title</label>
-                <textarea class="form-control" name="staff_picture_year" id="article-ckeditor10" rows="3" placeholder="Enter secondary title for your staff picture">{{$dashboard_edit->staff_picture_year}}</textarea>
+                <label for="article-ckeditor9">Staff Picture Secondary Title</label>
+                <textarea class="form-control" name="staff_picture_year" id="article-ckeditor9" rows="3" placeholder="Enter secondary title for your staff picture">{{$dashboard_edit->staff_picture_year}}</textarea>
             </div>
 
         </div>
