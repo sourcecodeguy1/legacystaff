@@ -36,10 +36,7 @@
        <br />
        <div class="container">
            <div class="row">
-               <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-12" style="display: none">
-                   Event Deleted
-                   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-               </div>
+               <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-12" style="display: none"></div>
                <br />
                <div class="container">
                    <div class="row">

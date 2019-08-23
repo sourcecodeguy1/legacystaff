@@ -233,7 +233,7 @@
                     if (data2.status === 200) {
                         $('#calendar').fullCalendar('removeEvents',data.delete_id);
                         $('#ModalEdit').modal('hide');
-                        $('#eventDeleteMessage').css('display','block');
+                        $('#eventDeleteMessage').html("Event Deleted!").fadeIn().delay(3000).fadeOut();
                         /*setTimeout(function () {
                             location.reload(true);
                         },1000);*/
