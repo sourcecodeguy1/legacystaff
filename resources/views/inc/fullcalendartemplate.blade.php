@@ -152,7 +152,7 @@
                     data: formData,
                     success: function (data) {
                         if (data.status === 200) {
-                            console.log(data.allData);
+
                             $('#ModalAdd #title').val('');
                             $('#ModalAdd #color').val('');
                             $('#ModalAdd').modal('hide');
