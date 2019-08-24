@@ -102,7 +102,8 @@
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
 
-        let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
+        //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
+        let itemsToRemove = '';
 
         CKEDITOR.replace( 'article-ckeditor1', {
             removeButtons: itemsToRemove
@@ -138,10 +139,6 @@
         } );
 
         CKEDITOR.replace( 'article-ckeditor9', {
-            removeButtons: itemsToRemove
-        } );
-
-        CKEDITOR.replace( 'article-ckeditor10', {
             removeButtons: itemsToRemove
         } );
     </script>
