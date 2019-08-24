@@ -93,6 +93,9 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
+        /*dd($request->all());
+        exit();*/
+
         $dashboard_post = Dashboard::find($id);
 
         $dashboard_post->update($request->all());

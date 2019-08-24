@@ -2,12 +2,34 @@
 
 @section('content')
 @if(Auth::user()->privilege_type === 'admin')
-    <form action="{!! action('DashboardController@update',$dashboard_edit->id) !!}" method="POST">
+    <form action="{!! route('dashboard.update',$dashboard_edit->id) !!}" method="POST">
 
         <input name="_method" type="hidden" value="PUT">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_1" placeholder="Tab 1" value="{{$dashboard_edit->tab_1}}">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_2" placeholder="Tab 2" value="{{$dashboard_edit->tab_2}}">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_3" placeholder="Tab 3" value="{{$dashboard_edit->tab_3}}">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_4" placeholder="Tab 4" value="{{$dashboard_edit->tab_4}}">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_5" placeholder="Tab 5" value="{{$dashboard_edit->tab_5}}">
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" name="tab_6" placeholder="Tab 6" value="{{$dashboard_edit->tab_6}}">
+                </div>
+            </div>
+        </div>
+        <br />
         <div class="row">
             <div class="col-lg-6">
                 <label for="week_of">Week of (Ex. Week 2)</label>

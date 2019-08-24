@@ -37,12 +37,12 @@
             <div class="p-3 mb-2 bg-dark text-white text-center">{{$datas->week_of.' '. $datas->week_of_date}}</div>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">WEEKLY BLAST</a>
-                    <a class="nav-item nav-link" id="nav-Tuesday-tab" data-toggle="tab" href="#nav-Tuesday" role="tab" aria-controls="nav-Tuesday" aria-selected="false">DATA HIGHLIGHTS</a>
-                    <a class="nav-item nav-link" id="nav-Wednesday-tab" data-toggle="tab" href="#nav-Wednesday" role="tab" aria-controls="nav-Wednesday" aria-selected="false">WEEK UPDATES</a>
-                    <a class="nav-item nav-link" id="nav-Thursday-tab" data-toggle="tab" href="#nav-Thursday" role="tab" aria-controls="nav-Thursday" aria-selected="false">SAVE THE DATES</a>
-                    <a class="nav-item nav-link" id="nav-Friday-tab" data-toggle="tab" href="#nav-Friday" role="tab" aria-controls="nav-Friday" aria-selected="false">PILAR ACTIONS ITEMS</a>
-                    <a class="nav-item nav-link" id="nav-Saturday-tab" data-toggle="tab" href="#nav-Saturday" role="tab" aria-controls="nav-Saturday" aria-selected="false">EXPO ACTIONS ITEMS</a>
+                    <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">{!! $datas->tab_1 !!}</a>
+                    <a class="nav-item nav-link" id="nav-Tuesday-tab" data-toggle="tab" href="#nav-Tuesday" role="tab" aria-controls="nav-Tuesday" aria-selected="false">{!! $datas->tab_2 !!}</a>
+                    <a class="nav-item nav-link" id="nav-Wednesday-tab" data-toggle="tab" href="#nav-Wednesday" role="tab" aria-controls="nav-Wednesday" aria-selected="false">{!! $datas->tab_3 !!}</a>
+                    <a class="nav-item nav-link" id="nav-Thursday-tab" data-toggle="tab" href="#nav-Thursday" role="tab" aria-controls="nav-Thursday" aria-selected="false">{!! $datas->tab_4 !!}</a>
+                    <a class="nav-item nav-link" id="nav-Friday-tab" data-toggle="tab" href="#nav-Friday" role="tab" aria-controls="nav-Friday" aria-selected="false">{!! $datas->tab_5 !!}</a>
+                    <a class="nav-item nav-link" id="nav-Saturday-tab" data-toggle="tab" href="#nav-Saturday" role="tab" aria-controls="nav-Saturday" aria-selected="false">{!! $datas->tab_6 !!}</a>
                 </div>
             </nav>
             <br />
