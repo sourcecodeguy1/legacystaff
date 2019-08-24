@@ -63,7 +63,7 @@
         <div class="row">
 
             <div class="col-lg-4">
-                <label for="article-ckeditor2">SHOUT OUTS</label>
+                <label for="article-ckeditor2">WEEKLY BLAST</label>
                 <textarea class="form-control" name="Monday" id="article-ckeditor2" rows="3" placeholder="Enter content">{{$dashboard_edit->Monday}}</textarea>
             </div>
 
