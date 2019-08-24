@@ -13,9 +13,9 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
 		{ name: 'links' },
-		{ name: 'insert', groups: ['insert', 'youtube', 'colorbutton'] },
+		{ name: 'insert', groups: ['insert', 'youtube', 'colorbutton', 'font'] },
 		{ name: 'forms' },
-		{ name: 'tools' },
+		{ name: 'tools', groups: ['tools', 'justify'] },
 		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
 		{ name: 'others' },
 		'/',
@@ -25,7 +25,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'colors' },
 		{ name: 'about' }
 	];
-    config.extraPlugins = 'youtube,colorbutton,colordialog';
+    config.extraPlugins = 'youtube,colorbutton,colordialog,font,justify';
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
 	config.removeButtons = 'Underline,Subscript,Superscript';

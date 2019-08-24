@@ -104,7 +104,7 @@
     <script>
 
         //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
-        let itemsToRemove = 'Source';
+        let itemsToRemove = 'Source,About';
 
         CKEDITOR.replace( 'article-ckeditor1', {
             removeButtons: itemsToRemove
