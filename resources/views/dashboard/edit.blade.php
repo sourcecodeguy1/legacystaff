@@ -8,6 +8,10 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <div class="container">
+            <div class="text-center">
+                <h4>Edit Tabs</h4>
+            </div>
+            <br />
             <div class="row">
                 <div class="col-lg-2">
                     <input type="text" class="form-control" name="tab_1" placeholder="Tab 1" value="{{$dashboard_edit->tab_1}}">
@@ -29,6 +33,8 @@
                 </div>
             </div>
         </div>
+        <br />
+        <hr />
         <br />
         <div class="row">
             <div class="col-lg-6">
