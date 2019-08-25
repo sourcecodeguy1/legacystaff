@@ -100,6 +100,9 @@
 
 
    {{-- <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>--}}
+    <script>
+        UPLOADCARE_PUBLIC_KEY = 'e9c52880a8af766d0549';
+    </script>
     <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
     <script>
 
@@ -107,7 +110,8 @@
         let itemsToRemove = 'Source,About';
 
         CKEDITOR.replace( 'article-ckeditor1', {
-            removeButtons: itemsToRemove
+            removeButtons: itemsToRemove,
+            imageBrowser_listUrl: "{{ asset('img') }}"
             // The rest of options...
         } );
 
