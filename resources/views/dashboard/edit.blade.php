@@ -63,17 +63,17 @@
         <div class="row">
 
             <div class="col-lg-4">
-                <label for="article-ckeditor2">WEEKLY BLAST</label>
+                <label for="article-ckeditor2">{{$dashboard_edit->tab_1}}</label>
                 <textarea class="form-control" name="Monday" id="article-ckeditor2" rows="3" placeholder="Enter content">{{$dashboard_edit->Monday}}</textarea>
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor3">DATA HIGHLIGHTS</label>
+                <label for="article-ckeditor3">{{$dashboard_edit->tab_2}}</label>
                 <textarea class="form-control" name="Tuesday" id="article-ckeditor3" rows="3" placeholder="Enter content">{{$dashboard_edit->Tuesday}}</textarea>
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor4">WEEK UPDATES</label>
+                <label for="article-ckeditor4">{{$dashboard_edit->tab_3}}</label>
                 <textarea class="form-control" name="Wednesday" id="article-ckeditor4" rows="3" placeholder="Enter content">{{$dashboard_edit->Wednesday}}</textarea>
             </div>
 
@@ -84,17 +84,17 @@
         <div class="row">
 
             <div class="col-lg-4">
-                <label for="article-ckeditor5">SAVE THE DATES</label>
+                <label for="article-ckeditor5">{{$dashboard_edit->tab_4}}</label>
                 <textarea class="form-control" name="Thursday" id="article-ckeditor5" rows="3" placeholder="Enter content">{{$dashboard_edit->Thursday}}</textarea>
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor6">PILAR ACTION ITEMS</label>
+                <label for="article-ckeditor6">{{$dashboard_edit->tab_5}}</label>
                 <textarea class="form-control" name="Friday" id="article-ckeditor6" rows="3" placeholder="Enter content">{{$dashboard_edit->Friday}}</textarea>
             </div>
 
             <div class="col-lg-4">
-                <label for="article-ckeditor7">EXPO ACTION ITEMS</label>
+                <label for="article-ckeditor7">{{$dashboard_edit->tab_6}}</label>
                 <textarea class="form-control" name="Saturday" id="article-ckeditor7" rows="3" placeholder="Enter content">{{$dashboard_edit->Saturday}}</textarea>
             </div>
 
