@@ -13,7 +13,8 @@
             </div>--}}
             <div class="row">
                 <div class="" style="width: 100%;">
-                    <div class="p-3 mb-2 bg-secondary text-white"><p>{!! $datas->quote_message !!}</p></div>
+                   {{-- <div class="p-3 mb-2 bg-secondary text-white"><p></p></div>--}}
+                    {!! $datas->quote_message !!}
                 </div>
             </div>
         </div>
