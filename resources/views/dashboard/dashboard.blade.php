@@ -60,31 +60,52 @@
 
     </div>
     </div>
+    <br />
     {{---------------------------------EDIT BUTTON AND CALENDAR---------------------------------}}
-    <div class="container">
+    <div class="">
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+             @if(Auth::user()->privilege_type === 'admin')
+            <div class="col-lg-8"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
+        @endif
+        </div>
+
         <div class="row">
 
-            <div class="col-lg-4"></div>
-            <div id="eventDeleteMessage" class="alert alert-success alert-dismissible fade show col-lg-8" style="display: none"></div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4"></div>
-                    @if(Auth::user()->privilege_type === 'admin')
-                        <div class="col-lg-8"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
-                    @endif
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
                 <br />
-            </div>
-            <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-8 ">
-                    <div id="calendar"></div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        @include('inc/fullcalendartemplate')
+
+            <div class="col-lg-8 ">
+                <br />
+                <div id="calendar"></div>
+            </div>
+
+        </div>{{--End of row--}}
+        <br />
+
     </div>
+        @include('inc/fullcalendartemplate')
+
     <br />
     <br />
     <br />

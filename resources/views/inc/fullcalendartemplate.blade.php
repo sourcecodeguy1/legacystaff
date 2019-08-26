@@ -27,6 +27,7 @@
                 $('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
                 $('#ModalAdd').modal('show');
             },
+
             eventClick: function(event) {
 
                 $('#ModalEdit #id').val(event.id);
@@ -71,7 +72,18 @@
                     color: '<?php echo $task['color']; ?>',
                 },
                 <?php } ?>
-            ]
+            ],
+            eventRender: function(event, element, view) {
+
+                // Display the tooltip only in Month view!!!
+                if(view.type === 'month'){
+                    $(element).tooltip({title: event.title, color: event.color});
+                }
+
+                /*$(element).on('mouseenter', function () {
+                    alert([event.start, event.end]);
+                });*/
+            }
         });
 
         function edit(event){
@@ -233,7 +245,6 @@
                     if (data2.status === 200) {
                         $('#calendar').fullCalendar('removeEvents',data.delete_id);
                         $('#ModalEdit').modal('hide');
-                        $('#eventDeleteMessage').html("Event Deleted!").fadeIn().delay(3000).fadeOut();
                         /*setTimeout(function () {
                             location.reload(true);
                         },1000);*/
