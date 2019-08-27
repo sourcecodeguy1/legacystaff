@@ -73,6 +73,6 @@
         </div>
     </li>--}}
     <li class="nav-item">
-        <a class="nav-link" href="dashboard" role="button">Home</a>
+        <a class="nav-link" href="/dashboard" role="button">Home</a>
     </li>
 </ul>
