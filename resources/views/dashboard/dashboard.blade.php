@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-lg-8">
-            <div class="p-3 mb-2 bg-dark text-white text-center">{{$datas->week_of.' '. $datas->week_of_date}}</div>
+            <div class="p-3 mb-2 bg-dark text-white text-center">{{$datas->week_of.' '. $datas->daterange}}</div>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" id="nav-Monday-tab" data-toggle="tab" href="#nav-Monday" role="tab" aria-controls="nav-Monday" aria-selected="true">{!! $datas->tab_1 !!}</a>

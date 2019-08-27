@@ -42,9 +42,26 @@
                 <input type="text" name="week_of" id="week_of" class="form-control" value="{{$dashboard_edit->week_of}}" placeholder="Ex. Week 2">
             </div>
 
-            <div class="col-lg-6">
+           {{-- <div class="col-lg-6">
                 <label for="week_of_date">Week of Date (Ex. 7/30-8/03) </label>
                 <input type="text" name="week_of_date" id="week_of_date" class="form-control" value="{{$dashboard_edit->week_of_date}}" placeholder="Enter week date">
+            </div>--}}
+
+            <div class="col-lg-6">
+                <div class="row">
+                    <label for="week_of_date">Date Range Picker</label>
+                    <input class="form-control" type="text" name="daterange" value="{{$dashboard_edit->daterange}}" readonly/>
+
+                    <script>
+                        $(function() {
+                            $('input[name="daterange"]').daterangepicker({
+                                opens: 'left'
+                            }, function(start, end, label) {
+                                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                            });
+                        });
+                    </script>
+                </div>
             </div>
         </div>
 
