@@ -16,6 +16,8 @@ Auth::routes();
 
 /*Route::get('/dashboard', 'DashboardController@index');*/
 
+Route::get('/users/manage_users', 'ManageUsersController@index');
+
 Route::get('/9th_grade', 'NineGradeController@index');
 
 Route::resource('dashboard', 'DashboardController');
