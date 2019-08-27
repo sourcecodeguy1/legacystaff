@@ -75,22 +75,20 @@
 
             <div class="col-lg-4">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                    <div class="card-body" name="dashboard_card_link">
+                       {{-- <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>--}}
+                        {!! $datas->dashboard_card_links !!}
                     </div>
                 </div>
                 <br />
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                    <div class="card-body" name="dashboard_card_contacts">
+                       {{-- <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>--}}
+                        {!! $datas->dashboard_card_contacts !!}
                     </div>
                 </div>
             </div>

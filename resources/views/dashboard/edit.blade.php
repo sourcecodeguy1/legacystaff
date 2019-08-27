@@ -99,7 +99,6 @@
             </div>
 
         </div>
-
         <br />
 
         <div class="row">
@@ -119,6 +118,18 @@
                 <textarea class="form-control" name="staff_picture_year" id="article-ckeditor9" rows="3" placeholder="Enter secondary title for your staff picture">{{$dashboard_edit->staff_picture_year}}</textarea>
             </div>
 
+            <div class="col-lg-4">
+                <label for="article-ckeditor10">Dashboard Links</label>
+                <textarea class="form-control" name="dashboard_card_links" id="article-ckeditor10" rows="3" placeholder="Enter content">{{$dashboard_edit->dashboard_card_links}}</textarea>
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4">
+                <label for="article-ckeditor11">Dashboard Contacts</label>
+                <textarea class="form-control" name="dashboard_card_contacts" id="article-ckeditor11" rows="3" placeholder="Enter content">{{$dashboard_edit->dashboard_card_contacts}}</textarea>
+            </div>
         </div>
         <br />
 

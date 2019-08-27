@@ -146,6 +146,14 @@
         CKEDITOR.replace( 'article-ckeditor9', {
             removeButtons: itemsToRemove
         } );
+
+        CKEDITOR.replace( 'article-ckeditor10', {
+            removeButtons: itemsToRemove
+        } );
+
+        CKEDITOR.replace( 'article-ckeditor11', {
+            removeButtons: itemsToRemove
+        } );
     </script>
 </body>
 </html>
