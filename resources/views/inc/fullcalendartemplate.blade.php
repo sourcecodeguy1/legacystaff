@@ -22,9 +22,10 @@
             selectable: true,
             selectHelper: true,
             select: function(start, end){
+                console.log(start);
                 // Call Add Model Here
-                $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD h:mm:ss'));
-                $('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD HH:mm:ss'));
+                $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD'));
+                $('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD'));
                 $('#ModalAdd').modal('show');
             },
 

@@ -51,6 +51,41 @@
                         </div>
                     </div>
 
+                    {{--<div class="form-group">
+                        <label for="week_of_date">Date Range Picker</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="week_of_date" name="daterange" value="" readonly/>
+                            <script>
+                                $(function() {
+                                    $('input[name="daterange"]').daterangepicker({
+                                        opens: 'left'
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>--}}
+
+                    <div class="form-group">
+                        <div class='col-sm-6'>
+                            <div class="form-group">
+                                <div class='input-group date input-group-addon' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                        <button id="btnDate" class="btn btn-primary">Add Date</button>
+                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $('#btnDate').on('click', function (e) {
+                                e.preventDefault();
+                                $('#datetimepicker1').datetimepicker();
+                            });
+
+                        </script>
+
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
