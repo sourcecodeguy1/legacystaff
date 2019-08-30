@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="df58ec37-7f57-48b9-9742-239b519346d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vendor/unisharp/laravel-ckeditor/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendor/unisharp/laravel-ckeditor/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/addModal.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/addModal.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/inc/fullcalendartemplate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inc/fullcalendartemplate.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
@@ -128,16 +130,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\legacystaff\public\css" />
-      <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
-      <recent name="C:\xampp\htdocs\legacystaff\public\staff2019" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
       <recent name="C:\xampp\htdocs\legacystaff\resources\views" />
       <recent name="C:\xampp\htdocs\legacystaff\resources\views\dashboard" />
       <recent name="C:\xampp\htdocs\legacystaff\public\Logo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\legacystaff\public\css" />
+      <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
+      <recent name="C:\xampp\htdocs\legacystaff\public\staff2019" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -178,7 +180,7 @@
       <workItem from="1566109910132" duration="8047000" />
       <workItem from="1566453300943" duration="79434000" />
       <workItem from="1566806524436" duration="9983000" />
-      <workItem from="1566893010231" duration="10016000" />
+      <workItem from="1566893010231" duration="59262000" />
     </task>
     <servers />
   </component>

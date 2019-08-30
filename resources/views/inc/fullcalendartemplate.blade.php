@@ -22,10 +22,19 @@
             selectable: true,
             selectHelper: true,
             select: function(start, end){
-                console.log(start);
                 // Call Add Model Here
-                $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD'));
-                $('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD'));
+                //$('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD'));
+                //$('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD'));
+
+                $('#ModalAdd #datepicker').val(moment(start).format('MM/DD/YYYY'));
+                $('#ModalAdd #datepicker2').val(moment(end).format('MM/DD/YYYY'));
+
+                $('#ModalAdd #start_hour').val(moment(start).format('h'));
+                $('#ModalAdd #start_minute').val(moment(start).format('mm'));
+
+                $('#ModalAdd #end_hour').val(moment(end).format('h'));
+                $('#ModalAdd #end_minute').val(moment(end).format('mm'));
+
                 $('#ModalAdd').modal('show');
             },
 
@@ -137,12 +146,23 @@
 
         $('#btnAddEvent').on('click', function (e) {
             e.preventDefault();
-
+            /*let start_am_pm = $('#ModalAdd #start_am_pm').val();
+            let end_am_pm = $('#ModalAdd #end_am_pm').val();
+           let start_hour = $('#ModalAdd #end_hour').val();
+            let start_minute = $('#ModalAdd #end_minute').val();
+            console.log(start_hour+":"+start_minute+" "+end_am_pm);
+            return true;*/
             let formData = {
                 title : $('#ModalAdd #title').val(),
                 color : $('#ModalAdd #color').val(),
-                start : $('#ModalAdd #start').val(),
-                end : $('#ModalAdd #end').val()
+                start : $('#ModalAdd #datepicker').val(),
+                end : $('#ModalAdd #datepicker2').val(),
+                start_hour : $('#ModalAdd #start_hour').val(),
+                start_minute : ":"+$('#ModalAdd #start_minute').val(),
+                start_am_pm : $('#ModalAdd #start_am_pm').val(),
+                end_hour : $('#ModalAdd #end_hour').val(),
+                end_minute : ":"+$('#ModalAdd #end_minute').val(),
+                end_am_pm : $('#ModalAdd #end_am_pm').val(),
             };
 
             if(formData.title !== ""){
@@ -154,18 +174,19 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
                     url: url,
-                    dataType: "JSON",
+                    //dataType: "JSON",
                     method: "POST",
                     data: formData,
                     success: function (data) {
+                        console.log(data);
                         if (data.status === 200) {
 
                             $('#ModalAdd #title').val('');
                             $('#ModalAdd #color').val('');
                             $('#ModalAdd').modal('hide');
 
-                            $('#calendar').fullCalendar( 'renderEvent', data.allData );
-
+                            //$('#calendar').fullCalendar( 'renderEvent', data.allData );
+                            location.reload();
                         } else {
                             alert('Could not be saved. Try again.');
                         }

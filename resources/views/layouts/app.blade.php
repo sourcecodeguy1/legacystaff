@@ -19,7 +19,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script type="text/javascript" src="/path/to/bootstrap-datetimepicker.min.js"></script>
     <!--======================--->
 
     <!-- Fonts -->
@@ -31,6 +30,11 @@
     <link rel="stylesheet" href="{{asset('css/fullcalendar.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
+    {{--------------------------------Date Picker------------------------------}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    {{--------------------------------------------------------------------------}}
 </head>
 <body>
     <div id="app">
@@ -112,50 +116,121 @@
 
         //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
         let itemsToRemove = 'Source,About';
+        let filebrowserBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=files")}}';
+        let filebrowserImageBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=images")}}';
+        let filebrowserFlashBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash")}}';
+        let filebrowserUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=files")}}';
+        let filebrowserImageUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=images")}}';
+        let filebrowserFlashUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash")}}';
 
         CKEDITOR.replace( 'article-ckeditor1', {
-            removeButtons: itemsToRemove,
-            imageBrowser_listUrl: "{{ asset('img') }}"
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
+            removeButtons: itemsToRemove
             // The rest of options...
         } );
 
         CKEDITOR.replace( 'article-ckeditor2', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor3', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor4', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor5', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor6', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor7', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor8', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor9', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor10', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
 
         CKEDITOR.replace( 'article-ckeditor11', {
+            filebrowserBrowseUrl : filebrowserBrowseUrl,
+            filebrowserImageBrowseUrl: filebrowserImageBrowseUrl,
+            filebrowserFlashBrowseUrl: filebrowserFlashBrowseUrl,
+            filebrowserUploadUrl: filebrowserUploadUrl,
+            filebrowserImageUploadUrl: filebrowserImageUploadUrl,
+            filebrowserFlashUploadUrl: filebrowserFlashUploadUrl,
             removeButtons: itemsToRemove
         } );
     </script>

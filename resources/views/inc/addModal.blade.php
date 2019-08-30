@@ -38,52 +38,129 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="start" class="col-sm-4 control-label">Start date</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="start" class="form-control" id="start">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="end" class="col-sm-4 control-label">End date</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="end" class="form-control" id="end">
-                        </div>
-                    </div>
 
-                    {{--<div class="form-group">
-                        <label for="week_of_date">Date Range Picker</label>
+                    <div class="form-group">
+                        <label for="datepicker" class="col-sm-4 control-label">Start date</label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" id="week_of_date" name="daterange" value="" readonly/>
+                            <input type="text" name="datepicker" class="form-control" id="datepicker" width="276">
                             <script>
-                                $(function() {
-                                    $('input[name="daterange"]').daterangepicker({
-                                        opens: 'left'
-                                    });
+                                $('#datepicker').datepicker({
+                                    uiLibrary: 'bootstrap4'
                                 });
                             </script>
                         </div>
-                    </div>--}}
+                        <br />
+                        <div class="container">
+                            <div class="row">
 
-                    <div class="form-group">
-                        <div class='col-sm-6'>
-                            <div class="form-group">
-                                <div class='input-group date input-group-addon' id='datetimepicker1'>
-                                    <input type='text' class="form-control" />
-                                    <span class="input-group-addon">
-                        <button id="btnDate" class="btn btn-primary">Add Date</button>
-                    </span>
+                                <div class="col-sm-4">
+                                    <label for="start_hour" class="col-sm-4 control-label">Hour</label>
+                                    <select name="start_hour" class="form-control" id="start_hour">
+
+                                        <option value="">Choose</option>
+                                        <option  value="1">1</option>
+                                        <option  value="2">2</option>
+                                        <option  value="3">3</option>
+                                        <option  value="4">4</option>
+                                        <option  value="5">5</option>
+                                        <option  value="6">6</option>
+                                        <option  value="7">7</option>
+                                        <option  value="8">8</option>
+                                        <option  value="9">9</option>
+                                        <option  value="10">10</option>
+                                        <option  value="11">11</option>
+                                        <option  value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <label for="start_minute" class="col-sm-4 control-label">Minute</label>
+                                    <select name="start_minute" class="form-control" id="start_minute">
+
+                                        <option value="">Choose</option>
+                                        <option value="00">:00</option>
+                                        <option value="15">:15</option>
+                                        <option value="30">:30</option>
+                                        <option value="45">:45</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+
+                                    <label for="start_am_pm" class="control-label">AM-PM</label>
+
+                                    <select name="start_am_pm" class="form-control" id="start_am_pm">
+
+                                        <option value="">Choose</option>
+                                        <option  value="AM">AM</option>
+                                        <option  value="PM">PM</option>
+
+                                    </select>
+
+
                                 </div>
                             </div>
                         </div>
-                        <script type="text/javascript">
-                            $('#btnDate').on('click', function (e) {
-                                e.preventDefault();
-                                $('#datetimepicker1').datetimepicker();
-                            });
+                    </div>
+                    <div class="form-group">
+                        <label for="datepicker2" class="col-sm-4 control-label">End date</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="datepicker2" class="form-control" id="datepicker2" width="276">
+                            <script>
+                                $('#datepicker2').datepicker({
+                                    uiLibrary: 'bootstrap4'
+                                });
+                            </script>
+                        </div>
+                    </div>
 
-                        </script>
+                    <div class="container">
+                        <div class="row">
 
+                            <div class="col-sm-4">
+                                <label for="end_hour" class="col-sm-4 control-label">Hour</label>
+                                <select name="end_hour" class="form-control" id="end_hour">
+
+                                    <option value="">Choose</option>
+                                    <option  value="1">1</option>
+                                    <option  value="2">2</option>
+                                    <option  value="3">3</option>
+                                    <option  value="4">4</option>
+                                    <option  value="5">5</option>
+                                    <option  value="6">6</option>
+                                    <option  value="7">7</option>
+                                    <option  value="8">8</option>
+                                    <option  value="9">9</option>
+                                    <option  value="10">10</option>
+                                    <option  value="11">11</option>
+                                    <option  value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="end_minute" class="col-sm-4 control-label">Minute</label>
+                                <select name="end_minute" class="form-control" id="end_minute">
+
+                                    <option value="">Choose</option>
+                                    <option value="00">:00</option>
+                                    <option value="15">:15</option>
+                                    <option value="30">:30</option>
+                                    <option value="45">:45</option>
+
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+
+                                <label for="end_am_pm" class="control-label">AM-PM</label>
+
+                                <select name="end_am_pm" class="form-control" id="end_am_pm">
+
+                                    <option value="">Choose</option>
+                                    <option  value="AM">AM</option>
+                                    <option  value="PM">PM</option>
+
+                                </select>
+
+
+                            </div>
+                        </div>
                     </div>
 
                 </div>
