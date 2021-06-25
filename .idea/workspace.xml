@@ -140,16 +140,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\legacystaff" />
+      <recent name="C:\xampp\htdocs\legacystaff\public\css" />
+      <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
+      <recent name="C:\xampp\htdocs\legacystaff\public\staff2019" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
       <recent name="C:\xampp\htdocs\legacystaff\resources\views" />
       <recent name="C:\xampp\htdocs\legacystaff\resources\views\dashboard" />
       <recent name="C:\xampp\htdocs\legacystaff\public\Logo" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\legacystaff\public\css" />
-      <recent name="C:\xampp\htdocs\legacystaff\resources\views\inc" />
-      <recent name="C:\xampp\htdocs\legacystaff\public\staff2019" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
