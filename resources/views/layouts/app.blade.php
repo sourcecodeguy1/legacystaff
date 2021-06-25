@@ -16,9 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
+
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
     <!--======================--->
 
     <!-- Fonts -->
@@ -43,7 +44,7 @@
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
                         <a class="navbar-brand" href="{{ Auth()->user() ? url('/dashboard') : url('/login') }}">
-                            <img src="{{ asset('Logo/legacylogo.png') }}" width="512" height="90" class="d-inline-block align-top col-sm-12 col-md-12 col-lg-12" alt="">
+                            <img src="{{ asset('public/Logo/legacylogo.png') }}" width="512" height="90" class="d-inline-block align-top col-sm-12 col-md-12 col-lg-12" alt="">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon"></span>
@@ -62,11 +63,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
-                                    @if (Route::has('register'))
+                                    {{--@if (Route::has('register'))
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </li>
-                                    @endif
+                                    @endif--}}
                                 @else
                                     <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -116,12 +117,12 @@
 
         //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
         let itemsToRemove = 'Source,About';
-        let filebrowserBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=files")}}';
-        let filebrowserImageBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=images")}}';
-        let filebrowserFlashBrowseUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash")}}';
-        let filebrowserUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=files")}}';
-        let filebrowserImageUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=images")}}';
-        let filebrowserFlashUploadUrl = '{{asset("vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash")}}';
+        let filebrowserBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash')}}";
+        let filebrowserUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash')}}";
 
         CKEDITOR.replace( 'article-ckeditor1', {
             filebrowserBrowseUrl : filebrowserBrowseUrl,
@@ -234,5 +235,6 @@
             removeButtons: itemsToRemove
         } );
     </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js'></script>
 </body>
 </html>

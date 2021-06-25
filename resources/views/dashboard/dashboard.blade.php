@@ -67,7 +67,7 @@
         <div class="row">
             <div class="col-lg-4"></div>
              @if(Auth::user()->privilege_type === 'admin')
-            <div class="col-lg-8"><a href="/dashboard/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
+            <div class="col-lg-8"><a href="{{url('/dashboard')}}/{{$datas->id}}/edit" class="btn btn-success btn-block">Edit</a></div>
         @endif
         </div>
 
