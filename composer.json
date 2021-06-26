@@ -12,7 +12,8 @@
         "ckeditor/ckeditor": "^4.16",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^8.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+	"unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
