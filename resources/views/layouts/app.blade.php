@@ -121,17 +121,17 @@
     <script>
         UPLOADCARE_PUBLIC_KEY = 'e9c52880a8af766d0549';
     </script>
-    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('public/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
     <script>
 
         //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
         let itemsToRemove = 'Source,About';
-        let filebrowserBrowseUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=files')}}";
-        let filebrowserImageBrowseUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
-        let filebrowserFlashBrowseUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash')}}";
-        let filebrowserUploadUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=files')}}";
-        let filebrowserImageUploadUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=images')}}";
-        let filebrowserFlashUploadUrl = "{{asset('vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash')}}";
+        let filebrowserBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashBrowseUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash')}}";
+        let filebrowserUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashUploadUrl = "{{asset('public/vendor/unisharp/laravel-ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash')}}";
 
         CKEDITOR.replace( 'article-ckeditor1', {
             filebrowserBrowseUrl : filebrowserBrowseUrl,
