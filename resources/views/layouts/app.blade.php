@@ -126,12 +126,12 @@
 
         //let itemsToRemove = 'Source,About,Format,Styles,Blockquote,Indent,Outdent,BulletedList,NumberedList,RemoveFormat,Superscript,Subscript,Maximize,SpecialChar,HorizontalRule,Image,Anchor,PasteFromWord,PasteText';
         let itemsToRemove = 'Source,About';
-        let filebrowserBrowseUrl = "{{asset('ckeditor/kcfinder/browse.php?opener=ckeditor&type=files')}}";
-        let filebrowserImageBrowseUrl = "{{asset('ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
-        let filebrowserFlashBrowseUrl = "{{asset('ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash')}}";
-        let filebrowserUploadUrl = "{{asset('ckeditor/kcfinder/upload.php?opener=ckeditor&type=files')}}";
-        let filebrowserImageUploadUrl = "{{asset('ckeditor/kcfinder/upload.php?opener=ckeditor&type=images')}}";
-        let filebrowserFlashUploadUrl = "{{asset('ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash')}}";
+        let filebrowserBrowseUrl = "{{asset('public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageBrowseUrl = "{{asset('public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashBrowseUrl = "{{asset('public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash')}}";
+        let filebrowserUploadUrl = "{{asset('public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files')}}";
+        let filebrowserImageUploadUrl = "{{asset('public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images')}}";
+        let filebrowserFlashUploadUrl = "{{asset('public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash')}}";
 
         CKEDITOR.replace( 'article-ckeditor1', {
             filebrowserBrowseUrl : filebrowserBrowseUrl,
